@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasir Ali Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+.search-container {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+
+.search-box input[type="text"] {
+            width: 400px;
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+
+        /* Navbar styling */
+        .navbar {
+            background-color: green; /* Updated navbar color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color:#4e6b92;
+            color: black;
+        }
+
+        /* School name below navbar */
+        .school-name {
+            background-color: #1e6b92; /* Updated school name background color */
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Marquee for Yasir Ali*/
+        .marquee {
+            background-color: #ffcc00;
+            color: #000;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            height: 30px;
+        }
+
+        .marquee-text {
+            position: absolute;
+            width: 100%;
+            animation: marquee-animation 9s linear infinite;
+        }
+
+        @keyframes marquee-animation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Login page container */
+        .login-container {
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #004080;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #004080;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-button:hover {
+            background-color: #003366;
+        }
+
+        /* Circle icon for login */
+        .login-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #004080;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>
+            <a href="#">Register</a>
+            <a href="#">Classes</a>
+            <a href="#">Students</a>
+            <a href="#">About</a>
+        </div>
+
+        <!-- Login circle icon on the right side -->
+        <div class="login-circle" onclick="openLoginPage()">🔑</div>
+    </div>
+
+    <!-- School name below navbar -->
+    <div class="school-name">
+        Yasir Ali Website's
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-text"></div>
+    </div>
+
+    <!-- Hidden login page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <input type="email" class="form-input" placeholder="Email or Phone" required>
+                <input type="password" class="form-input" placeholder="Password" required>
+                <button type="submit" class="form-button">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the login page
+        function openLoginPage() {
+            document.getElementById("loginPage").style.display = "flex";
+        }
+    </script>
+
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+<button class="exit1">Exit</button>
+
+</body>
+</html>
